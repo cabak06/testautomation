@@ -1,8 +1,0 @@
-in order to run html reports, simply (pip install pytest-html)
---> in CMD type : pytest --html-report.html --self-contained-html
-
-If you want the file to be staored in a specific folder:
-pytest --browser=chrome --html=C:\\Users\\cahit\\Desktop\\testautomation\\testaut\\reports\\<NAME OF REPORT>.html --self-contained-html
-
-
-Manipulating the report:

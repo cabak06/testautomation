@@ -1,0 +1,45 @@
+get current url  = driver.current_url
+back = driver.back()
+forward = driver.forward()
+refresh page = driver.refresh()
+get page title = driver.title
+maximize window = driver.maximize_window()
+minimize = driver.minimize_window()
+full screen = driver.fullscreen_window()
+closing a window or tab = driver.close()
+quitting the browser = driver.quit()
+screenshot = driver.save_screenshot('filename')
+
+
+//undersøg 
+lambdatest.com
+http://demo.guru99.com/test/guru99home/
+
+__________________________________________________
+
+
+PYTEST
+You nedd to start the file with test_
+to run it in the cmd type pytest + name of file (starting with test_)
+To run all the files in project type py.test
+To run tests only from a specific file, we can use py.test <filename>
+If you want a more detailed test-run result, add -v (ex. pytest -v and -vs )
+If you want to run certain test-methods, you can use pytest -k + searchword in methods
+py.test -m <name>, -m <name> mentions the marker name (used to categorize testcases)
+Fixtures is used whenever you want to run code before every test-method (they are stored in conftest.py file)
+The purpose of parameterizing a test is to run a test against multiple sets of arguments. We can do this by @pytest.mark.parametrize.
+Skipping a test means that the test will not be executed. We can skip tests using @pytest.mark.skip.
+
+To get overview of full options, type pytest --help
+
+--XML--
+We can create test results in XML format which we can feed to Continuous Integration servers for further processing and so. This can be done by
+py.test <filename> -v -–junitxml=”result.xml” --> will be stored as "result.xml"
+
+
+--PARALLEL RUN-- 
+pip install pytest-xdist - pytest -n 3 (workers set to 3)
+
+
+
+   

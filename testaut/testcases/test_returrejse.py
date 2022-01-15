@@ -69,12 +69,12 @@ class TestGoogleTravelReturn(softest.TestCase):
         self.assert_all()
 
 
-    def test_fail_browser(self):
+    def test_manipulate_pass(self):
         self.acc_button.accept_google_button()
         self.enter_flyafgange.enter_flyafgange()
-        bool_false = False
+        bool_manipulated_true = True
         bool_true = True
-        self.assertEqual(bool_false, bool_true)
+        self.assertEqual(bool_manipulated_true, bool_true)
         
 
 

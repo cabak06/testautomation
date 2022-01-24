@@ -10,8 +10,8 @@ from ddt import ddt, data, file_data, unpack
 sys.path.append(r'\Users\cahit\Desktop\testautomation')
 import pages.google_accept_button, pages.flyafgange, pages.rejse_specifikationer, pages.logics, utilities.utils, utilities.reader
 from utilities.reader import Reader
-excel_reader = Reader()
-csv_reader = Reader()
+reader = Reader()
+reader = Reader()
 
 #to run the TC: pytest -vs --browser chrome|firefox|edge
 
@@ -33,9 +33,9 @@ class TestGoogleTravelReturn(softest.TestCase):
     #@unpack
     #@file_data("../testdata/jdata.json")   RUN JSON FILE
     #@file_data("../testdata/testyml.yml")  RUN YAML FILE
-    #@data(*excel_reader.read_data_from_excel('../testdata/test_xl.xlsx','Mysheet')) RUN FILE
+    #@data(*reader.read_data_from_excel('../testdata/test_xl.xlsx','Mysheet')) RUN EXCEL FILE
     
-    @data(*csv_reader.read_data_from_csv('testdata/CSV_data.csv'))
+    @data(*reader.read_data_from_csv('testdata/CSV_data.csv'))
     @unpack
     def test_googl_travel_return(self,dest_from,dest_to,date_go,date_re):
         
